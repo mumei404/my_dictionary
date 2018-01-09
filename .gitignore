@@ -1,6 +1,7 @@
 # CakePHP specific files #
 ##########################
 /config/app.php
+/config/app_heroku.php
 /config/.env
 /logs/*
 /tmp/*
