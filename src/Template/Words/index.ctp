@@ -1,15 +1,13 @@
-<h1>一覧</h1>
-<a href="<?php echo $this->Url->Build(['controller' => 'Words', 'action' => 'add']); ?>"><button>単語登録</button></a>
-<?php // echo $this->Fotm->create('search'); ?>
+<h1>Words</h1>
+<a href="<?php echo $this->Url->Build(['controller' => 'Words', 'action' => 'add']); ?>"><button>Add a new word</button></a>
 <?php echo $this->Form->control('search'); ?>
-<?php // echo $this->Form->end(); ?>
 <table id="table" class="tablesorter">
     <thead>
         <tr>
-            <th>登録日時</th>
-            <th>単語</th>
-            <th>意味</th>
-            <th>機能</th>
+            <th>Date</th>
+            <th>word</th>
+            <th>meaning</th>
+            <th>Other</th>
         </tr>
     </thead>
     <tbody>
