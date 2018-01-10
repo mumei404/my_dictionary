@@ -8,7 +8,6 @@ use Cake\ORM\TableRegistry;
 class WordsController extends AppController {
     public function initialize() {
         parent::initialize();
-        $this->Tags = TableRegistry::get('tags');
     }
 
     public function index() {

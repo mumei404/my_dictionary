@@ -1,4 +1,4 @@
-<h1>Add words</h1>
+<h1>単語登録</h1>
 <?php
     echo $this->Form->create($word);
     echo $this->Form->control('name');
