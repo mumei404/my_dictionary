@@ -31,4 +31,13 @@ class WordsController extends AppController {
         }
         $this->Flash->error(__('Warning.'));
     }
+
+    public function delete($id) {
+        $this->request->allowMethod(['post', 'delete']);
+        $word = $this->Words->get($id);
+        if ($this->Words->delete($word)) {
+            $this->Flash->success('Deleted.');
+            return $this->redirect(['action' => 'index']);
+        }
+    }
 }
