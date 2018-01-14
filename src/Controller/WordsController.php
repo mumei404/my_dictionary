@@ -32,6 +32,24 @@ class WordsController extends AppController {
         $this->Flash->error(__('Warning.'));
     }
 
+    public function edit($id) {
+        $word = $this->Words->get($id);
+        $options = $this->Words->Tags->find('list');
+        $this->set('word', $word);
+        $this->set('options', $options);
+
+        if (!$this->request->is(['post', 'put'])) {
+            return $this->render();
+        }
+        $word = $this->Words->patchEntity($word, $this->request->getData());
+        if ($this->Words->save($word)) {
+            $this->Flash->success('Complete.');
+            return $this->redirect(['action' => 'index']);
+        }
+        $this->Flash->error('Warning.');
+
+    }
+
     public function delete($id) {
         $this->request->allowMethod(['post', 'delete']);
         $word = $this->Words->get($id);

@@ -16,7 +16,12 @@
             <td><?php echo h($word->created); ?></td>
             <td class="words"><?php echo h($word->name); ?></td>
             <td><?php echo h($word->meaning); ?></td>
-            <td><?php echo $this->Form->postLink('Delete', ['action' => 'delete', $word->id], ['confirm' => 'Are you sure?']); ?></td>
+            <td>
+                <a href="<?php echo $this->Url->build(['controller' => 'Words', 'action' => 'edit', $word->id]); ?>">
+                    Edit
+                </a>
+                <?php echo $this->Form->postLink('Delete', ['action' => 'delete', $word->id], ['confirm' => 'Are you sure?']); ?>
+            </td>
         </tr>
     <?php endforeach; ?>
     </tbody>
