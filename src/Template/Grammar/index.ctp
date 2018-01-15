@@ -6,10 +6,6 @@
             <a href="<?php echo $this->Url->build(['controller' => 'Grammar', 'action' => 'detail', $eachGrammar->id]); ?>">
                 <?php echo h($eachGrammar->title); ?>
             </a>
-            <a href="<?php echo $this->Url->build(['controller' => 'Grammar', 'action' => 'edit', $eachGrammar->id]); ?>">
-                Edit
-            </a>
-            <?php echo $this->Form->postLink('Delete', ['action' => 'delete', $eachGrammar->id], ['confirm' => 'Are you sure?']); ?>
         </li>
     <?php endforeach; ?>
 </ul>

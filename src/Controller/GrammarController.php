@@ -51,7 +51,7 @@ class GrammarController extends AppController {
         $grammar = $this->Grammar->patchEntity($grammar, $this->request->getData());
         if ($this->Grammar->save($grammar)) {
             $this->Flash->success('Complete.');
-            return $this->redirect(['action' => 'index', $grammar->grammar_tag_id]);
+            return $this->redirect(['action' => 'detail', $grammar->id]);
         }
         $this->Flash->error('Warning.');
     }

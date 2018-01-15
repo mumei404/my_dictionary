@@ -5,9 +5,10 @@
     <thead>
         <tr>
             <th>Date</th>
-            <th>word</th>
-            <th>meaning</th>
-            <th>Other</th>
+            <th>Word</th>
+            <th>Meaning</th>
+            <th>Example</th>
+            <th>Others</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
             <td><?php echo h($word->created); ?></td>
             <td class="words"><?php echo h($word->name); ?></td>
             <td><?php echo h($word->meaning); ?></td>
+            <td><?php echo nl2br(h($word->example)); ?></td>
             <td>
                 <a href="<?php echo $this->Url->build(['controller' => 'Words', 'action' => 'edit', $word->id]); ?>">
                     Edit
