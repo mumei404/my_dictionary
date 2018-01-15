@@ -26,7 +26,7 @@ class GrammarTagsController extends AppController {
             $this->Flash->success('Complete.');
             return $this->redirect(['action' => 'index']);
         }
-        $this->Falsh->error('Warning.');
+        $this->Flash->error('Warning.');
     }
 
 }
